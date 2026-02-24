@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Tetris | Modern Web Puzzle Game</title>
+    <meta name="description"
+        content="Play a beautiful, modern, dark-themed Tetris game directly in your browser. Features neon graphics and glassmorphic UI.">
+
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="game-container">
+
+        <!-- Left Panel: Stats -->
+        <aside class="panel left-panel glass">
+            <div class="stat-box">
+                <h2>Score</h2>
+                <div id="score" class="stat-value">0</div>
+            </div>
+            <div class="stat-box">
+                <h2>Level</h2>
+                <div id="level" class="stat-value">1</div>
+            </div>
+            <div class="stat-box">
+                <h2>Lines</h2>
+                <div id="lines" class="stat-value">0</div>
+            </div>
+        </aside>
+
+        <!-- Center: Game Board -->
+        <section class="board-wrapper glass-board">
+            <canvas id="tetris-canvas" width="300" height="600"></canvas>
+
+            <!-- Game Over Overlay -->
+            <div id="game-overlay" class="overlay hidden">
+                <h1 id="overlay-title">Neon Tetris</h1>
+                <p id="overlay-message">Press Start to Play</p>
+                <button id="start-btn" class="neon-btn">Start Game</button>
+            </div>
+        </section>
+
+        <!-- Right Panel: Controls & Next Piece -->
+        <aside class="panel right-panel glass">
+            <div class="next-piece-box">
+                <h2>Next</h2>
+                <canvas id="next-canvas" width="120" height="120"></canvas>
+            </div>
+
+            <div class="controls-info">
+                <h3>Controls</h3>
+                <ul>
+                    <li><span class="key">←</span> <span class="key">→</span> Move</li>
+                    <li><span class="key">↑</span> Rotate</li>
+                    <li><span class="key">↓</span> Soft Drop</li>
+                    <li><span class="key">Space</span> Hard Drop</li>
+                </ul>
+            </div>
+        </aside>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
